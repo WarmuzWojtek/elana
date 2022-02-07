@@ -1,0 +1,41 @@
+.header {
+  &__top {
+    height: 60px;
+    background-color: map-get($map: $colors, $key: "primary");
+    & img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__nav {
+    height: 110px;
+    background-color: map-get($map: $colors, $key: "secondary");
+    & .container-sm {
+      display: flex;
+      align-items: center;
+      padding: $base-size/4 map-get($map: $spacings, $key: "xxs");
+      & nav {
+        flex-grow: 1;
+        & ul {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          list-style: none;
+          & li {
+            margin-left: map-get($map: $spacings, $key: "s");
+            & a {
+              font-weight: map-get($map: $font-weight, $key: "bold");
+              color: map-get($map: $colors, $key: "text-dark");
+              font-size: map-get($map: $font-size, $key: "s");
+              text-decoration: none;
+              transition: 0.3s;
+              &:hover {
+                border-bottom: 2px solid map-get($map: $colors, $key: "primary");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+$main-font: "Roboto", sans-serif;
+
+//Colors
+$colors: (
+  "primary": #3a3ab9,
+  "secondary": #ffec01,
+  "white": #ffffff,
+  "black": #000000,
+  "text-dark": #1049a0,
+  "socials-bcg": #006fb4,
+);
+
+//Spacing
+$base-size: 16px;
+
+$spacings: (
+  "xxs": $base-size * 1.25,
+  //20px
+  "xxs2": $base-size * 1.5,
+  //24px
+  "xs": $base-size * 2,
+  //32px
+  "xs2": $base-size * 2.25,
+  //36px
+  "s": $base-size * 2.5,
+  //40px
+  "m": $base-size * 3,
+  //48px
+  "m2": $base-size * 4,
+  //64px
+  "l": $base-size * 4.5,
+  //72px
+  "xl": $base-size * 6,
+  // 96px
+  "xxl": $base-size * 8,
+  // 128px
+  "xxxl": $base-size * 12.5 // 200px,,,,,,,,
+);
+
+//Headers font sizes
+$font-size: (
+  "extra-small": 14px,
+  "xxxs": 18px,
+  "xxs": 20px,
+  "xs": 22px,
+  "s": 24px,
+  "m": 26px,
+  "l": 28px,
+  "xl": 32px,
+  "small": 36px,
+  "medium": 48px,
+  "large": 56px,
+  "extra-large": 72px,
+  "mega-large": 96px,
+);
+
+$font-weight: (
+  "normal": 400,
+  "bold": 700,
+);

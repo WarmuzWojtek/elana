@@ -1,0 +1,83 @@
+.news {
+  background-color: map-get($map: $colors, $key: "primary");
+  padding-top: $base-size/2;
+  padding-bottom: $base-size * 6;
+  &__banner {
+    height: 518px;
+    background-image: url("../../build/Asets/Images/banner.png");
+    background-position: center;
+    background-size: cover;
+    border: 2px solid map-get($map: $colors, $key: "black");
+  }
+  &__xbanner {
+    padding: map-get($map: $spacings, $key: "m");
+    & img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    color: map-get($map: $colors, $key: "secondary");
+    font-size: map-get($map: $font-size, $key: "mega-large");
+    text-align: center;
+    padding: map-get($map: $spacings, $key: "m");
+    font-weight: map-get($map: $font-weight, $key: "bold");
+  }
+  &__thumbs {
+    display: flex;
+    border: 1px solid map-get($map: $colors, $key: "black");
+    flex-wrap: wrap;
+    margin-bottom: map-get($map: $spacings, $key: "m");
+  }
+  &__halfContainer {
+    color: map-get($map: $colors, $key: "secondary");
+    width: 50%;
+    &:nth-child(2) {
+      padding: map-get($map: $spacings, $key: "m");
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__subtitle {
+    font-size: map-get($map: $font-size, $key: "medium");
+    font-weight: map-get($map: $font-weight, $key: "bold");
+  }
+  &__content {
+    font-size: map-get($map: $font-size, $key: "s");
+    font-weight: map-get($map: $font-weight, $key: "bold");
+  }
+  &__thumb {
+    width: 33%;
+    height: 198px;
+    display: flex;
+    background: map-get($map: $colors, $key: "secondary");
+    color: map-get($map: $colors, $key: "primary");
+    padding: map-get($map: $spacings, $key: "xs");
+    align-items: center;
+    & img {
+      width: 60%;
+    }
+  }
+  &__thumbTitle {
+    padding-left: map-get($map: $spacings, $key: "xs");
+    font-size: map-get($map: $font-size, $key: "s");
+  }
+  &__thumbsContainer {
+    width: 100%;
+    max-width: 1366px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .container-sm {
+    text-align: center;
+  }
+}

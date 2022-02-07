@@ -1,0 +1,10 @@
+.sponsor {
+  background: map-get($map: $colors, $key: "primary");
+  min-height: 320px;
+  & h3 {
+    font-size: map-get($map: $font-size, $key: "medium");
+    font-weight: map-get($map: $font-weight, $key: "bold");
+    color: map-get($map: $colors, $key: "secondary");
+    text-align: center;
+  }
+}

@@ -1,0 +1,11 @@
+.socials {
+  background: map-get($map: $colors, $key: "socials-bcg");
+  min-height: 768px;
+  & h2 {
+    color: map-get($map: $colors, $key: "secondary");
+    font-size: map-get($map: $font-size, $key: "mega-large");
+    text-align: center;
+    padding: map-get($map: $spacings, $key: "m");
+    font-weight: map-get($map: $font-weight, $key: "bold");
+  }
+}
