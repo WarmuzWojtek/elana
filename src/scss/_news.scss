@@ -3,27 +3,42 @@
   padding-top: $base-size/2;
   padding-bottom: $base-size * 6;
   &__banner {
-    height: 518px;
+    height: auto;
     border: 2px solid map-get($map: $colors, $key: "black");
     & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      // object-fit: cover;
     }
   }
   &__xbanner {
     padding: map-get($map: $spacings, $key: "m");
     & img {
-      display: block;
-      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
     }
   }
   &__title {
     color: map-get($map: $colors, $key: "secondary");
-    font-size: map-get($map: $font-size, $key: "mega-large");
+    font-size: map-get($map: $font-size, $key: "s");
     text-align: center;
     padding: map-get($map: $spacings, $key: "m");
     font-weight: map-get($map: $font-weight, $key: "bold");
+    @media (min-width: 576px) {
+      font-size: map-get($map: $font-size, $key: "s");
+    }
+    @media (min-width: 768px) {
+      font-size: map-get($map: $font-size, $key: "m");
+    }
+    @media (min-width: 992px) {
+      font-size: map-get($map: $font-size, $key: "l");
+    }
+    @media (min-width: 1200px) {
+      font-size: map-get($map: $font-size, $key: "xl");
+    }
+    @media (min-width: 1400px) {
+      font-size: map-get($map: $font-size, $key: "mega-large");
+    }
   }
   &__thumbs {
     display: flex;
@@ -32,8 +47,12 @@
     margin-bottom: map-get($map: $spacings, $key: "m");
   }
   &__halfContainer {
+    width: 100%;
     color: map-get($map: $colors, $key: "secondary");
-    width: 50%;
+    @media (min-width: 992px) {
+      width: 50%;
+    }
+
     &:nth-child(2) {
       padding: map-get($map: $spacings, $key: "m");
       display: flex;
@@ -56,13 +75,18 @@
     font-weight: map-get($map: $font-weight, $key: "bold");
   }
   &__thumb {
-    width: 33%;
+    width: 100%;
     height: 198px;
     display: flex;
     background: map-get($map: $colors, $key: "secondary");
     color: map-get($map: $colors, $key: "primary");
     padding: map-get($map: $spacings, $key: "xs");
     align-items: center;
+    margin-bottom: map-get($map: $spacings, $key: "xs");
+    @media (min-width: 992px) {
+      width: 33%;
+      margin: 0;
+    }
     & img {
       width: 60%;
     }
@@ -75,6 +99,7 @@
     width: 100%;
     max-width: 1366px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }

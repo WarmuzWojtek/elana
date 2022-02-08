@@ -1,10 +1,28 @@
 .header {
   &__top {
     height: 60px;
+    display: flex;
+    align-items: center;
     background-color: map-get($map: $colors, $key: "primary");
     & img {
+      max-width: 100%;
+      height: auto;
       display: block;
       margin: 0 auto;
+    }
+  }
+  &__logo {
+    flex-basis: 20%;
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__menuIcon {
+    flex-basis: 10%;
+    & img {
+      max-width: 100%;
+      height: auto;
     }
   }
   &__nav {
@@ -12,12 +30,14 @@
     background-color: map-get($map: $colors, $key: "secondary");
     & .container-sm {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: $base-size/4 map-get($map: $spacings, $key: "xxs");
       & nav {
         flex-grow: 1;
         & ul {
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
           justify-content: flex-end;
           list-style: none;
