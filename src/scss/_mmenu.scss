@@ -1,0 +1,12 @@
+.mm-spn.mm-spn--light {
+  color: map-get($map: $colors, $key: "secondary");
+  background: map-get($map: $colors, $key: "primary");
+}
+
+.mm-spn.mm-spn--navbar:after {
+  opacity: 1;
+}
+
+.mm-spn.mm-spn--navbar ul:before {
+  opacity: 1;
+}

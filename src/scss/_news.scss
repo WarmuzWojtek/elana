@@ -3,78 +3,167 @@
   padding-top: $base-size/2;
   padding-bottom: $base-size * 6;
   &__banner {
-    height: 518px;
-    border: 2px solid map-get($map: $colors, $key: "black");
+    height: auto;
+    // border: 2px solid map-get($map: $colors, $key: "black");
+    margin-top: map-get($map: $spacings, $key: "xxs2");
     & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 0 15px 1px map-get($map: $colors, $key: "black");
     }
   }
   &__xbanner {
-    padding: map-get($map: $spacings, $key: "m");
-    & img {
-      display: block;
+    padding-top: map-get($map: $spacings, $key: "xs");
+    @media (min-width: 768px) {
+      padding: map-get($map: $spacings, $key: "m");
+    }
+    & a {
+      max-width: 980px;
       margin: 0 auto;
+      height: auto;
+      display: block;
+      & img {
+        transition: 0.3s;
+        cursor: pointer;
+        max-width: 100%;
+        height: auto;
+        &:hover {
+          box-shadow: 0 0 15px 1px map-get($map: $colors, $key: "black");
+        }
+      }
     }
   }
   &__title {
     color: map-get($map: $colors, $key: "secondary");
-    font-size: map-get($map: $font-size, $key: "mega-large");
+    font-size: map-get($map: $font-size, $key: "small");
     text-align: center;
-    padding: map-get($map: $spacings, $key: "m");
+    padding: map-get($map: $spacings, $key: "xs");
     font-weight: map-get($map: $font-weight, $key: "bold");
+    @media (min-width: 768px) {
+      font-size: map-get($map: $font-size, $key: "medium");
+      padding: map-get($map: $spacings, $key: "m");
+    }
+    @media (min-width: 992px) {
+      font-size: map-get($map: $font-size, $key: "large");
+    }
+    @media (min-width: 1200px) {
+      font-size: map-get($map: $font-size, $key: "extra-large");
+      padding: map-get($map: $spacings, $key: "l");
+    }
+    @media (min-width: 1400px) {
+      font-size: map-get($map: $font-size, $key: "mega-large");
+    }
   }
   &__thumbs {
     display: flex;
-    border: 1px solid map-get($map: $colors, $key: "black");
     flex-wrap: wrap;
     margin-bottom: map-get($map: $spacings, $key: "m");
+    @media (min-width: 992px) {
+      border: 1px solid map-get($map: $colors, $key: "black");
+    }
   }
   &__halfContainer {
+    width: 100%;
     color: map-get($map: $colors, $key: "secondary");
-    width: 50%;
+    @media (min-width: 992px) {
+      width: 50%;
+    }
+
     &:nth-child(2) {
-      padding: map-get($map: $spacings, $key: "m");
+      padding: map-get($map: $spacings, $key: "s") 0;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      @media (min-width: 992px) {
+        padding: map-get($map: $spacings, $key: "xxs");
+      }
     }
     & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+      // object-fit: cover;
     }
   }
   &__subtitle {
-    font-size: map-get($map: $font-size, $key: "medium");
+    font-size: map-get($map: $font-size, $key: "l");
     font-weight: map-get($map: $font-weight, $key: "bold");
+    margin-bottom: map-get($map: $spacings, $key: "xxs");
+
+    @media (min-width: 768px) {
+      font-size: map-get($map: $font-size, $key: "xl");
+    }
+    @media (min-width: 992px) {
+      font-size: map-get($map: $font-size, $key: "l");
+    }
+    @media (min-width: 1200px) {
+      font-size: map-get($map: $font-size, $key: "small");
+    }
+    @media (min-width: 1400px) {
+      font-size: map-get($map: $font-size, $key: "medium");
+    }
   }
   &__content {
-    font-size: map-get($map: $font-size, $key: "s");
+    font-size: map-get($map: $font-size, $key: "xxxs");
     font-weight: map-get($map: $font-weight, $key: "bold");
+    margin-bottom: map-get($map: $spacings, $key: "xs");
+    @media (min-width: 768px) {
+      font-size: map-get($map: $font-size, $key: "xxs");
+    }
+    @media (min-width: 992px) {
+      font-size: map-get($map: $font-size, $key: "xs");
+    }
+    @media (min-width: 1200px) {
+      font-size: map-get($map: $font-size, $key: "s");
+    }
+    @media (min-width: 1400px) {
+      font-size: map-get($map: $font-size, $key: "s");
+    }
   }
   &__thumb {
-    width: 33%;
-    height: 198px;
+    width: 100%;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
     background: map-get($map: $colors, $key: "secondary");
     color: map-get($map: $colors, $key: "primary");
-    padding: map-get($map: $spacings, $key: "xs");
+    padding: map-get($map: $spacings, $key: "xxs");
     align-items: center;
+    margin-bottom: map-get($map: $spacings, $key: "xs");
+
+    @media (min-width: 992px) {
+      width: 33%;
+      margin: 0;
+      height: 198px;
+    }
     & img {
-      width: 60%;
+      width: 100%;
+      margin-bottom: map-get($map: $spacings, $key: "xs");
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+        width: 50%;
+      }
     }
   }
   &__thumbTitle {
-    padding-left: map-get($map: $spacings, $key: "xs");
+    width: 100%;
     font-size: map-get($map: $font-size, $key: "s");
+    @media (min-width: 768px) {
+      width: 50%;
+      padding-left: map-get($map: $spacings, $key: "xxs");
+    }
+    @media (min-width: 992px) {
+      font-size: map-get($map: $font-size, $key: "xxs");
+    }
+    @media (min-width: 1400px) {
+      font-size: map-get($map: $font-size, $key: "s");
+    }
   }
   &__thumbsContainer {
     width: 100%;
     max-width: 1366px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
