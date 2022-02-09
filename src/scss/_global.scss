@@ -30,3 +30,9 @@ body {
     max-width: 1366px;
   }
 }
+
+.desktop-hide {
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
