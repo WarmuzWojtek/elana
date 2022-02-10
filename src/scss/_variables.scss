@@ -35,11 +35,12 @@ $spacings: (
   // 96px
   "xxl": $base-size * 8,
   // 128px
-  "xxxl": $base-size * 12.5 // 200px,,,,,,,,
+  "xxxl": $base-size * 10 // 200px,,,,,,,,,,
 );
 
 //Headers font sizes
 $font-size: (
+  "mega-small": 10px,
   "extra-small": 14px,
   "xxxs": 18px,
   "xxs": 20px,
