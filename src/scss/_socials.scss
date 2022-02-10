@@ -1,11 +1,64 @@
 .socials {
   background: map-get($map: $colors, $key: "socials-bcg");
-  min-height: 768px;
+  min-height: 900px;
   & h2 {
     color: map-get($map: $colors, $key: "secondary");
-    font-size: map-get($map: $font-size, $key: "mega-large");
+    font-size: map-get($map: $font-size, $key: "small");
     text-align: center;
-    padding: map-get($map: $spacings, $key: "m");
+    padding: map-get($map: $spacings, $key: "xs");
     font-weight: map-get($map: $font-weight, $key: "bold");
+    @media (min-width: 768px) {
+      font-size: map-get($map: $font-size, $key: "medium");
+      padding: map-get($map: $spacings, $key: "m");
+    }
+    @media (min-width: 992px) {
+      font-size: map-get($map: $font-size, $key: "large");
+    }
+    @media (min-width: 1200px) {
+      font-size: map-get($map: $font-size, $key: "extra-large");
+      padding: map-get($map: $spacings, $key: "l");
+    }
+    @media (min-width: 1400px) {
+      font-size: map-get($map: $font-size, $key: "mega-large");
+    }
+  }
+  & .container-sm {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__column {
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 32%;
+    }
+  }
+  &__media {
+    color: map-get($map: $colors, $key: "secondary");
+    font-size: map-get($map: $font-size, $key: "l");
+    font-weight: map-get($map: $font-weight, $key: "bold");
+    margin-bottom: map-get($map: $spacings, $key: "xxs");
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: map-get($map: $font-size, $key: "xl");
+    }
+    @media (min-width: 992px) {
+      font-size: map-get($map: $font-size, $key: "l");
+    }
+    @media (min-width: 1200px) {
+      font-size: map-get($map: $font-size, $key: "small");
+    }
+    @media (min-width: 1400px) {
+      font-size: map-get($map: $font-size, $key: "medium");
+    }
+  }
+  &__card {
+    min-height: 500px;
+    background-color: map-get($map: $colors, $key: "white");
+    border-radius: 12px;
+    box-shadow: 0 0 15px 1px map-get($map: $colors, $key: "black");
+    margin-bottom: map-get($map: $spacings, $key: "xxs");
   }
 }

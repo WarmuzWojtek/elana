@@ -1,10 +1,46 @@
 .sponsor {
   background: map-get($map: $colors, $key: "primary");
-  min-height: 320px;
+  min-height: 220px;
+  padding-bottom: $base-size * 6;
   & h3 {
-    font-size: map-get($map: $font-size, $key: "medium");
-    font-weight: map-get($map: $font-weight, $key: "bold");
     color: map-get($map: $colors, $key: "secondary");
+    font-size: map-get($map: $font-size, $key: "small");
     text-align: center;
+    padding: map-get($map: $spacings, $key: "xs");
+    font-weight: map-get($map: $font-weight, $key: "bold");
+    @media (min-width: 768px) {
+      font-size: map-get($map: $font-size, $key: "medium");
+      padding: map-get($map: $spacings, $key: "m");
+    }
+    @media (min-width: 992px) {
+      font-size: map-get($map: $font-size, $key: "large");
+    }
+    @media (min-width: 1200px) {
+      font-size: map-get($map: $font-size, $key: "extra-large");
+      padding: map-get($map: $spacings, $key: "l");
+    }
+    @media (min-width: 1400px) {
+      font-size: map-get($map: $font-size, $key: "mega-large");
+    }
+  }
+  &__link {
+    color: map-get($map: $colors, $key: "secondary");
+    font-size: map-get($map: $font-size, $key: "l");
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      font-size: map-get($map: $font-size, $key: "xl");
+    }
+    @media (min-width: 992px) {
+      font-size: map-get($map: $font-size, $key: "l");
+    }
+    @media (min-width: 1200px) {
+      font-size: map-get($map: $font-size, $key: "small");
+    }
+    @media (min-width: 1400px) {
+      font-size: map-get($map: $font-size, $key: "medium");
+    }
   }
 }

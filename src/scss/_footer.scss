@@ -1,0 +1,86 @@
+.prefooter {
+  background: map-get($map: $colors, $key: "secondary");
+  padding-top: map-get($map: $spacings, $key: "xs");
+  & .container-sm {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__logo {
+    display: none;
+    width: 10%;
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+  &__column {
+    width: 100%;
+    @media (min-width: 572px) {
+      width: 45%;
+    }
+    @media (min-width: 992px) {
+      width: 30%;
+    }
+
+    &:nth-of-type(2) {
+      padding-left: map-get($map: $spacings, $key: "m");
+      margin-bottom: map-get($map: $spacings, $key: "xs");
+
+      @media (min-width: 768px) {
+        padding-left: map-get($map: $spacings, $key: "l");
+      }
+      @media (min-width: 992px) {
+        padding-left: map-get($map: $spacings, $key: "xxl");
+      }
+      @media (min-width: 1200px) {
+        padding-left: map-get($map: $spacings, $key: "xxxl");
+      }
+    }
+    &:nth-of-type(3) {
+      display: none;
+      @media (min-width: 992px) {
+        display: block;
+      }
+    }
+    &:nth-of-type(4) {
+      padding-left: map-get($map: $spacings, $key: "m");
+      @media (min-width: 572px) {
+        padding-left: map-get($map: $spacings, $key: "l");
+      }
+      @media (min-width: 992px) {
+        padding-left: 0;
+      }
+    }
+    & * {
+      margin-bottom: map-get($map: $spacings, $key: "xxs") / 3;
+      @media (min-width: 992px) {
+        margin-bottom: map-get($map: $spacings, $key: "xxs") / 2;
+      }
+    }
+  }
+  &__title {
+    font-size: map-get($map: $font-size, $key: "xxxs");
+    font-weight: map-get($map: $font-weight, $key: "bold");
+    color: map-get($map: $colors, $key: "primary");
+  }
+  &__link {
+    display: block;
+    font-weight: map-get($map: $font-weight, $key: "bold");
+    color: map-get($map: $colors, $key: "primary");
+    text-decoration: none;
+    font-size: map-get($map: $font-size, $key: "extra-small");
+  }
+}
+
+.footer {
+  background: map-get($map: $colors, $key: "secondary");
+  padding: map-get($map: $spacings, $key: "xs") 0;
+  @media (min-width: 572px) {
+    padding: 0 0 map-get($map: $spacings, $key: "xs") 0;
+  }
+  & p {
+    color: map-get($map: $colors, $key: "primary");
+    font-size: map-get($map: $font-size, $key: "mega-small");
+    font-weight: map-get($map: $font-weight, $key: "bold");
+    text-align: center;
+  }
+}
